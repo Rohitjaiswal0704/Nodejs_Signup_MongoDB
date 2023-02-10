@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/profile.css">
+  <title><%= title%> | User Auth</title>
+</head>
+<body>
+  
+  <h1 class="p_h1">Welcome <%= title%>🙋‍♂️</h1>
+
+   <p class="p_name">Logged in user Name is :-  <b class="p_n1"><%= user.username%></b> </p>
+   <p class="p_name2">Logged in user Email is :-  <b class="p_n1"><%= user.email%></b> </p>
+  
+<div class="u_d">
+    <a href="/delete/<%= user._id%>"><img src="https://img.icons8.com/color/48/000000/trash--v1.png"/></a>
+    <a href="/update/<%= user._id%>"><img src="https://img.icons8.com/color/48/000000/edit--v1.png"/></a>
+</div>
+
+  <br>
+  <br>
+  <a class="lg_ou" href="/logout">Log out</a>
+
+</body>
+</html>

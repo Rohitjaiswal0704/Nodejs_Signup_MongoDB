@@ -1,0 +1,26 @@
+<!--  -->
+<%-include('header')%>
+<!--  -->
+
+<div class="container shadow-lg mt-5 d-flex">
+  <!--left  -->
+  <div class="left">
+    <h1>Welcome To User Registration Page</h1>
+    <div class="hr"></div>
+    <h3>Sign up to create a new account.</h3>
+  </div>
+  <!-- right -->
+  <div class="right">
+    <form action="/update/<%=user._id%>" method="post" class="w-100 d-flex flex-column">
+      <input class="form-control w-75 m-auto"  type="text" name="username" placeholder="username" value="<%= user.username%>">
+      <input class="form-control m-auto w-75 my-5" type="email" name="email" placeholder="email" value="<%= user.email%>">
+      <input class="form-control m-auto w-75" type="password" name="password" placeholder="password" value="<%= user.password%>">
+      <button class="btn btn-success m-auto w-25 mt-5 text-center">Signup</button>
+    </form>
+  
+    <a href="/signin" class="btn btn-success w-25 text-decoration-none mt-5">Signin</a>
+  </div>
+</div>
+
+<!--  -->
+<%-include('footer')%>
